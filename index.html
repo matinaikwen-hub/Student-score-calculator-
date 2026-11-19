@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Score Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Student Score Calculator</h1>
+        <p>Enter student scores to calculate totals and grades.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Student</th>
+                    <th>CA 1</th>
+                    <th>CA 2</th>
+                    <th>CA 3</th>
+                    <th>Exam</th>
+                    <th>Total</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody id="studentTable">
+
+                <script>
+                    for (let i = 1; i <= 5; i++) {
+                        document.write(`
+                        <tr class="student-row">
+                            <td>Student ${i}</td>
+                            <td><input class="score" type="number" min="0" max="10"></td>
+                            <td><input class="score" type="number" min="0" max="10"></td>
+                            <td><input class="score" type="number" min="0" max="10"></td>
+                            <td><input class="score" type="number" min="0" max="70"></td>
+                            <td class="total">--</td>
+                            <td class="grade">--</td>
+                        </tr>
+                        `);
+                    }
+                </script>
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
